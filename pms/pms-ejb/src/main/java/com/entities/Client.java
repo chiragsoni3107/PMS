@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name="Client")
@@ -17,22 +18,30 @@ public class Client {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long clientId;
 	
+	@NotNull
 	private String name;
 	
 	private String description;
 	
+	@NotNull
 	private Date subscriptionDate;
 	
+	@NotNull
 	private Date registrationEndDate;
 	
+	@NotNull
 	private String timeZone;
 	
+	@NotNull
 	private long allowedUsers;
 	
+	@NotNull
 	private long allowedProjects;
 	
+	@NotNull
 	private boolean isFreeSubscription;
 	
+	@NotNull
 	private String emailId;
 	
 	private String otherContactInformation;

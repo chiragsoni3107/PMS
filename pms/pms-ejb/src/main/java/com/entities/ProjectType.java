@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name="ProjectType")
@@ -16,6 +17,7 @@ public class ProjectType {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long projectTypeId;
 	
+	@NotNull
 	private String name;
 	
 	private String description;
